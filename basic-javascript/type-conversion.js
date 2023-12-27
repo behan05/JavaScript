@@ -35,7 +35,7 @@ items.push("END Items");
 
 // console.log(items);
 
-// Object by constructor: // Objects are used to store different type of datas type.
+// Object by constructor: // Objects are used to store different type of datas type
 
 const obj = new Object();
 
