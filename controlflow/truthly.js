@@ -6,10 +6,12 @@
 
 // true, 1, " ", [], {}, 
 
-const val = 0;
+const val = null;
+
 if(val){
     console.log("false value");
 }
 
 
 
+// console.log(null);
