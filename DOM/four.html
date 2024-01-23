@@ -7,7 +7,7 @@
     <title>DOM | CREATE | EDIT | DELETE ELEMENT</title>
 </head>
 
-<body>
+<body id="body">
     <ul class="language">
         <li>javaScript</li>
     </ul>
@@ -15,16 +15,43 @@
 
 
 <Script>
-    // create Element
 
-    function addLanguage(langName) {
+    const body = document.getElementById('body');
+    body.style.backgroundColor = "#212121";
+    body.style.color = "#fff";
+
+    // Create Element.
+
+    const addLanguage = function(langName){
         const li = document.createElement('li');
         const addText = document.createTextNode(langName);
         li.appendChild(addText);
-        document.querySelector(".language").appendChild(li);
+
+        const ul = document.querySelector('.language');
+        ul.appendChild(li)
     }
-    addLanguage("python")
-    addLanguage("java")
+    addLanguage('python')
+    addLanguage('java')
+
+    // Edit.
+
+    function editLanguage(editIndex, newLanguage){
+        const li = document.querySelector(editIndex);
+
+        // console.log(li.nextElementSibling);
+
+        const newli = document.createElement('li');
+        newli.innerText = newLanguage;
+        newli.style.backgroundColor = "red"
+        li.replaceWith(newli)
+    }
+    editLanguage("li:first-child", "Ruby")
+
+    // remove element.
+
+    const lastLi = document.querySelector('li:last-child');
+    console.log(lastLi.innerHTML);
+    lastLi.remove();
 
 </Script>
 
