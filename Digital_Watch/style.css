@@ -1,0 +1,32 @@
+*{
+    background-color: #212121;
+    color: #fff;
+}
+
+#firstHeading {
+    width: auto;
+    height: 5em;
+    box-shadow: 1px 1px 2px 2px red;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.box{
+    width: 120px;
+    height: 2rem;
+    margin-right: 20px;
+    box-shadow: 1px 1px 2px 2px #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.watchBox{
+    width: 12em;
+    height: 3em;
+    border: 2px solid red;
+    position: absolute;
+    top: 50%;
+    left: 42%;
+}
