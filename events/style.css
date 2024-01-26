@@ -1,0 +1,22 @@
+/* body {
+    background-color: #212121;
+    color: #fff;
+    box-sizing: border-box;
+} */
+
+button {
+    height: 50px;
+    width: 110px;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.black {
+    background-color: #212121;
+    color: #fff;
+}
+
+.white {
+    background-color: #fff;
+    color: #212121;
+}
