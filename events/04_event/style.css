@@ -1,0 +1,21 @@
+* {
+    background-color: #212121;
+    color: #fff;
+}
+
+div{
+    display: flex;
+}
+
+#btn-start {
+    height: 25px;
+    width: 100px;
+    border-color: whitesmoke;
+    margin-right: 2px;
+}
+#btn-stop {
+    height: 25px;
+    width: 100px;
+    border-color: whitesmoke;
+    margin-left: 2px;
+}
