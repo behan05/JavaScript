@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API || XMLHttpRequest</title>
+    <style>
+        body {
+            background-color: #212121;
+            color: #fff;
+            box-sizing: border-box;
+        }
+
+        .apiImage {
+            width: 250px;
+            height: 250px;
+            box-shadow: 1px 1px 1px 1px #fff;
+            margin-left: 40%;
+            margin-top: 15%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- get data from github API using XMLHttpRequest-->
+    <div id="apiImage"></div>
+</body>
+<script>
+    const requestUrl = "https://api.github.com/users/behan05";
+    const xhr = new XMLHttpRequest(); // it is a single-ton object that created using construct method.
+    xhr.open('GET', requestUrl);
+    xhr.onreadystatechange = function () {
+        console.log(xhr.readyState); // displaying the current state.
+        if (xhr.readyState === 4) {
+            const data = JSON.parse(this.responseText); // convert string to json that return object.
+            const avatar = data.avatar_url;
+            const name = data.name;
+            const followers = data.followers;
+            // console.log(data);
+
+            const divForImg = document.querySelector('#apiImage');
+            divForImg.innerHTML = `
+            <img src="${avatar}" width="250">
+            `
+        }
+    }
+    xhr.send();
+</script>
+
+</html>

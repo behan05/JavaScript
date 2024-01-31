@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API || XMLHttpRequest</title>
+    <style>
+        body {
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- XMLHttpRequest() => object
+    used to interect with server, and retrieve data from a URL. -->
+</body>
+<script>
+    const requestUrl = "https://api.github.com/users/behan05"
+
+    const xhr = new XMLHttpRequest();
+
+    xhr.open('GET', requestUrl);
+
+    xhr.onreadystatechange = function() {
+        if(xhr.readyState === 4){
+            const data = JSON.parse(this.responseText)
+            console.log(data.repos_url);
+            console.log(data.following);
+            console.log(data.followers);
+            console.log(data.name);
+            console.log(data.login);
+            console.log(data.url);
+            console.log(data.location);
+            console.log(data.avatar_url); // profile image of github.
+        }
+        // console.log(xhr.readyState);
+    }
+    xhr.send()
+</script>
+
+</html>
