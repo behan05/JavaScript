@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    /* by default 8px*/
+    margin: 0px;
+    /* by default 8px*/
+}
+
+body {
+    background-color: #212121;
+    color: #fff;
+    /* font-style: italic; */
+}
+
+#outer1 {
+    display: flex;
+    /* justify-content: center; */
+}
+
+#avatar {
+    box-shadow: 1px 1px 1px 2px #fff;
+    width: 250px;
+    height: 250px;
+    margin-top: 8px;
+    margin-left: 8px;
+}
+
+img {
+    width: 250px;
+    height: 250px;
+}
+
+li {
+    list-style-type: none;
+}
+
+.startWatch {
+    box-shadow: 1px 1px 1px 1px rebeccapurple;
+    width: 200px;
+    height: 40px;
+    margin-top: 8px;
+    margin-left: 8px;
+    background-color: transparent;
+    color: #fff;
+    font-weight: 800;
+}
+
+#outer2 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#watch {
+    box-shadow: 1px 1px 1px 1px #fff;
+    width: 200px;
+    height: 80px;
+    margin-top: 8px;
+    margin-right: 7.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    color: red;
+    font-size: 1.1rem;
+}
+
+#outer3 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#startTime {
+    box-shadow: 1px 1px 1px 1px rebeccapurple;
+    width: 200px;
+    height: 40px;
+    margin-top: 8px;
+    margin-right: 8px;
+    background-color: transparent;
+    color: #fff;
+    font-weight: 800;
+}
+
+#stopTime {
+    box-shadow: 1px 1px 1px 1px rebeccapurple;
+    width: 200px;
+    height: 40px;
+    margin-top: 8px;
+    margin-right: 8px;
+    background-color: transparent;
+    color: #fff;
+    font-weight: 800;
+}
