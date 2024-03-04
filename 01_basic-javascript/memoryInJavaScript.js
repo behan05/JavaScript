@@ -2,7 +2,6 @@
 
 // Stak Memory(Primitive), Heap Memory(Non-Primitive/Reference).
 
-
 let name = "behan";
 let anotherName = name;
 anotherName = "sitesh";
@@ -21,3 +20,5 @@ userTwo.userEmail = "sitesh@microshoft.com";
 
 console.log(user.userEmail);
 console.log(userTwo.userEmail);
+
+  

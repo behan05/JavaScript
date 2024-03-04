@@ -1,10 +1,10 @@
 // try to understand the working of data type.
 
-let userName = "behan";
-let userAge = 24;
-let isUserLoggedIn = true;
-let userCity = null;
-let userEmail;
+// let userName = "behan";
+// let userAge = 24;
+// let isUserLoggedIn = true;
+// let userCity = null;
+// let userEmail;
 
 // let symbol, bigInt // not use friquently.
 
@@ -25,22 +25,22 @@ let userEmail;
 
 // array / objects
 
-let items = new Array();
+// let items = new Array();
 
-for(let i = 1; i <= 5; i++){
-    let iConv = String(i);
-    items.push(iConv)
-}
-items.push("END Items");
+// for(let i = 1; i <= 5; i++){
+//     let iConv = String(i);
+//     items.push(iConv)
+// }
+// items.push("END Items");
 
 // console.log(items);
 
 // Object by constructor: // Objects are used to store different type of datas type
 
-const obj = new Object();
+// const obj = new Object();
 
-obj.name = "behan";
-obj.age = 24;
+// obj.name = "behan";
+// obj.age = 24;
 
 // console.log(obj);
 
@@ -51,46 +51,46 @@ obj.age = 24;
 
 // Without using object construnctor.
 
-const person = {
-    creditName:"Behan", // Note one thing, key is treated as string.
-    creditNumber:12345,
-    creditEmail:'behan.google.com',
-    creditIsLoggedIn:true
-}
+// const person = {
+//     creditName:"Behan", // Note one thing, key is treated as string.
+//     creditNumber:12345,
+//     creditEmail:'behan.google.com',
+//     creditIsLoggedIn:true
+// }
 
-console.log(person);
-console.log(typeof person);
+// console.log(person);
+// console.log(typeof person);
 
 // Access properties of object by its key name.
 
-console.log(person["creditName"]);
-console.log(typeof person.creditName);
+// console.log(person["creditName"]);
+// console.log(typeof person.creditName);
 
 // ********************************************************************************* //
 // data conversion.
 
-let score = 4;
-let nowScoreType = String(score); // conversing number to string.
+// let score = 4;
+// let nowScoreType = String(score); // conversing number to string.
 
-let nowScorety = Boolean(score); // conversion number to boolean.
+// let nowScorety = Boolean(score); // conversion number to boolean.
 
 // console.log(nowScorety);
 // console.log(typeof nowScorety);
 
 
 
-let srt = "12";
+// let srt = "12";
 // let conv = Number(srt); // convert string to number.
 
 // let str = "12abc"  
 // let conv = Number(str); // convert in number but the output is NaN(Not a Number).
 
-let str = ""; // "" ==> false, "behan" ==> true.
-let conv = Boolean(str);
+// let str = ""; // "" ==> false, "behan" ==> true.
+// let conv = Boolean(str);
 // console.log(conv);
 // console.log(typeof conv);
 
-let strVal = "behan";
+// let strVal = "behan";
 
 // let arr = new Array(strVal); // convert in array.
 // for(ar of arr){
@@ -99,3 +99,41 @@ let strVal = "behan";
 
 // console.log(arr);
 // console.log(typeof arr);
+
+
+// Second time Preactice => 
+
+// let name = "Behan";
+// let name = 'behan05';
+// let name = false;
+let name = "";
+// let conv = String(name)
+// let conv = Number(name)
+// let conv = Boolean(name)
+// console.log(typeof conv);
+// console.log(conv);
+
+// let age = 1; true
+// let age = 0; false
+let age = 24;
+// let convNum = String(age)
+// let convNum = Boolean(age)
+// let convNum = Number(age)
+// console.log(typeof convNum);
+// console.log(convNum);
+
+// let isLoggedIn = false;
+// let isLoggedIn = true;
+let isLoggedIn = true;
+// let convBoolean = String(isLoggedIn)
+// let convBoolean = Number(isLoggedIn)
+// let convBoolean = Object(isLoggedIn)
+// let convBoolean = Array(isLoggedIn)
+
+// console.log(typeof convBoolean);
+// console.log(convBoolean);
+
+
+// console.table([name, age, isLoggedIn, email, address])
+
+// console.log(typeof name);
