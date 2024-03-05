@@ -1,4 +1,4 @@
- 
+  
 // const myDate = new Date();
 // console.log(myDate);
 // console.log(myDate.toString()); // return date and time.
@@ -33,8 +33,19 @@
 
 // console.log(Math.floor(Date.now()/1000));
 
+const currentDate = new Date();
+// console.log(currentDate);
+// console.log(currentDate.getDate());
+// console.log(currentDate.getFullYear());
+// console.log(currentDate.getHours());
+// console.log(currentDate.toDateString());
+// console.log(currentDate.toLocaleDateString());
+// console.log(currentDate.toLocaleTimeString());
+// console.log(currentDate.toLocaleString());
 
-  
+
+
+
 
 
 
