@@ -58,3 +58,9 @@ console.log(increment()); // Output: 3
 ```
 
 In this example, the count variable is private to the counter function. The inner function returned by counter forms a closure over count, allowing it to access and modify the count variable even though it's not directly accessible from outside the counter function.
+
+
+
+# Best Wishes 🌟
+
+Thank you for exploring the JavaScript functions! Wishing you the best on your coding journey. May your projects be bug-free, your code be elegant, and your learning journey be fulfilling. Keep coding and keep shining! ✨
