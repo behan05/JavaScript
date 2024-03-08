@@ -22,14 +22,14 @@
 
 
 // Creating a Array with number.
-let numArray = [1,2,3,4,5,6];
+let numArray = [1, 2, 3, 4, 5, 6];
 
 // Creating a Array with string.
 let strArray = ["Apple", "Orange", "Banana"];
 
 // Creating a Array with mixed data type.
 
-let mixedArray = [1,2,"Hello", true, {userLoggedIn: false}, ["i am zero index",4,5]]
+let mixedArray = [1, 2, "Hello", true, { userLoggedIn: false }, ["i am zero index", 4, 5]]
 
 // setTimeout(()=>{
 //     console.table([numArray,strArray,mixedArray])
@@ -43,16 +43,28 @@ let mixedArray = [1,2,"Hello", true, {userLoggedIn: false}, ["i am zero index",4
 // console.log(mixedArray[5][0]); // output : i am zero index
 
 // console.log(strArray.length)
+
+// **************************************************************************
+
 // - Array Methods
+// ## Accessing and Modifying Arrays:
+// - Accessing Elements
+// - Modifying Elements
+// - Adding Elements
+// - Removing Elements
+// - Slicing and Splicing
 
 // method is pre-defined function you can simply apply on array and call then by using "()".
-let fruit = ["Apple", "Orange", "Banana"];
-let fruit2 = ["Kiwi", "Baer"];
-// fruit.push("Mango".toUpperCase()); // add MANGO at the end of array.
-// fruit.pop(); //remove from last index => MANGO will removed.
-fruit.unshift("Kiwi") // add at the beginning of array.
-// fruit.shift() // remove from beginning
 
+// let fruit = ["Apple", "Orange", "Banana"];
+// let fruit2 = ["Kiwi", "Baer"];
+
+// fruit.push("Mango".toUpperCase()); // add MANGO at the end of array.
+
+// fruit.pop(); //remove from last index => MANGO will removed.
+
+// fruit.unshift("Kiwi") // add at the beginning of array.
+// fruit.shift() // remove from beginning
 
 // console.log(fruit.includes("kiwi"));
 // console.log(fruit.indexOf("Kiwi"));
@@ -62,8 +74,55 @@ fruit.unshift("Kiwi") // add at the beginning of array.
 // console.log(fruit.join(' ')); // return as String.
 // console.log(String(fruit));
 
-
 // console.log(fruit.slice(0, 2));
-console.log(fruit.splice(0, 1, "deleted!"));
+// console.log(fruit.splice(0, 1, "deleted!"));
 // (index, delete, add-item)
-console.log(fruit);
+// console.log(fruit);
+
+// **************************************************************************
+
+// ## Searching and Sorting Arrays:
+// - indexOf Method
+// - includes Method
+// - find Method
+// - findIndex Method
+// - sort Method
+// - reverse Method
+
+let fruit = ["Apple", "Orange", "Banana"];
+
+// console.log(fruit.indexOf("Apple"));
+// console.log(fruit.includes("Orange"));
+// let storeFind = fruit.find((item) => (item) === "Orange"); // work as iterator.
+// console.log(storeFind);
+// console.log(fruit.indexOf("Orange"));
+
+let num = [1,3,6,5,43,2,6,7];
+
+// // console.log(num.sort());
+// for (let i = 0; i < num.length - 1; i++) {
+//     for (let j = i + 1; j < num.length; j++) {
+//         // Bubble sorting Algorithm
+//         if (num[i] > num[j]) {
+//             let temp = num[j];
+//             num[j] = num[i];
+//             num[i] = temp;
+//         }
+//     }
+// }
+
+// console.log(num);
+
+// console.log(num.reverse());
+// for (let i = num.length; i >= 0; i--) {
+//     const element = num[i];
+//     console.log(element);
+    
+// }
+
+// ## Array Properties:
+// - length Property
+
+// console.log(num.length);
+
+
