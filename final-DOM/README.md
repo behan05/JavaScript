@@ -69,3 +69,9 @@
 - Online tutorials, articles, and documentation
 - Recommended books on DOM scripting and JavaScript
 - Useful libraries and frameworks for working with the DOM
+
+
+
+# Best Wishes 🌟
+
+Thank you for exploring the JavaScript functions! Wishing you the best on your coding journey. May your projects be bug-free, your code be elegant, and your learning journey be fulfilling. Keep coding and keep shining! ✨
