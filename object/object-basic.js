@@ -221,6 +221,14 @@ githubProfile.isLoggedIn = true;
 //    - Object.getOwnPropertyNames(), Object.getOwnPropertySymbols()
 //    - Object.getOwnPropertyDescriptors()
 
+
+
+
+
+
+
+
+
 // 7. Object Methods and Operations
 //    - Object.assign()
 //    - Object.freeze(), Object.seal(), Object.preventExtensions()
