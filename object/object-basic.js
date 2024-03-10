@@ -1,3 +1,4 @@
+
 // 1. What is an Object? =>
 
 // In JavaScript, an object is a fundamental data type that represents a collection of key-value pairs, where each key is a unique identifier (property) associated with a value.
@@ -220,17 +221,162 @@ githubProfile.isLoggedIn = true;
 //    - Object.keys(), Object.values(), Object.entries()
 //    - Object.getOwnPropertyNames(), Object.getOwnPropertySymbols()
 //    - Object.getOwnPropertyDescriptors()
+const inheritObject = {
+    name: "mai nahi bataunga",
+    id: "kyu janna hai"
+}
+const userApi = {
+    login: "behan05",
+    id: 83676505,
+    node_id: "MDQ6VXNlcjgzNjc2NTA1",
+    avatar_url: "https://avatars.githubusercontent.com/u/83676505?v=4",
+    gravatar_id: "",
+    inher: inheritObject.name,
+    url: "https://api.github.com/users/behan05",
+    html_url: "https://github.com/behan05",
+    followers_url: "https://api.github.com/users/behan05/followers",
+    following_url: "https://api.github.com/users/behan05/following{/other_user}",
+    gists_url: "https://api.github.com/users/behan05/gists{/gist_id}",
+    starred_url: "https://api.github.com/users/behan05/starred{/owner}{/repo}",
+    subscriptions_url: "https://api.github.com/users/behan05/subscriptions",
+    organizations_url: "https://api.github.com/users/behan05/orgs",
+    repos_url: "https://api.github.com/users/behan05/repos",
+    events_url: "https://api.github.com/users/behan05/events{/privacy}",
+    received_events_url: "https://api.github.com/users/behan05/received_events",
+    type: "User",
+    site_admin: false,
+    name: "Behan kumar",
+    company: null,
+    blog: "",
+    location: "New Delhi",
+    email: null,
+    hireable: true,
+    bio: "Passionate developer on a journey to explore the realms of software engineering. Committed to continuous learning and innovation.",
+    twitter_username: null,
+    public_repos: 15,
+    public_gists: 0,
+    followers: 0,
+    following: 0,
+    created_at: "2021-05-04T22:15:20Z",
+    updated_at: "2024-03-06T21:17:12Z"
+}
 
+// for...in Loop =>
+// it return keys of Object.
+// also called object specific loop.
 
+for (const key in userApi) {
+    if (userApi.hasOwnProperty(key)) {
+        // console.log(`${key} : ${userApi[key]}`);
+    }
+    else {
+        break;
+    }
+}
 
+// Object.keys(), Object.values(), Object.entries() =>
 
+const keys = Object.keys(userApi); // return array
+const values = Object.values(userApi); // return array
+// console.log(keys) 
+// console.log(values) 
 
+keys.forEach((items) => {
+    if (items === "bio") {
+        // console.log(userApi[items].toUpperCase());
+    }
+})
 
-
-
+const entries = Object.entries(userApi);
+// console.log(entries); separate each key and value in array.
+entries.forEach(([key, value]) => { // [key,value] destructuring.
+    // console.log(key,value);
+})
+// *****************************************************************
 
 // 7. Object Methods and Operations
 //    - Object.assign()
+//    - Spread Operator (...)
 //    - Object.freeze(), Object.seal(), Object.preventExtensions()
 //    - Object.is()
 //    - Object.prototype.hasOwnProperty(), Object.prototype.toString()
+//    - Object.hasOwnProperty.call()
+
+// - Object.assign() =>
+// use for concate.
+const obj1 = {
+    name: "behan",
+    age: 24
+};
+
+const obj2 = {
+    student: true,
+    branch: "cse"
+};
+
+const mergedObj = Object.assign({}, obj1, obj2);
+// console.log(mergedObj);
+
+//  Spread Operator (...) =>
+const merged = { ...obj1, ...obj2 };
+// console.log(merged);
+
+// Object.freeze(), Object.seal(), Object.preventExtensions() =>
+
+// Object.freeze(obj1) // after freeze you can't be change anything.
+
+// Object.seal(obj1) // seal the object which means you can't add or remove properties but still modify them.
+
+// obj1.form = "input" // this operation will ignore!
+// delete obj1.name // this operation will ignore!
+
+obj1.name = "shree ram"; // happen
+obj1.age = "Infinity"; // happen
+// console.log(obj1);
+
+
+// Object.preventExtensions() => 
+// Object.preventExtensions() is a method in JavaScript that prevents any new properties from being added to an object, but allows the modification or deletion of existing properties.
+
+// Object.preventExtensions(obj1);
+// obj1.name = "jai shree ram"; // success.
+
+// delete obj1.age // success.
+
+// obj1.cource = "Javascript" // ignored.
+
+// console.log(obj1);
+
+
+//    - Object.hasOwnProperty.call()
+
+
+// - Object.is() => trurn true/ false.
+const object1 = {
+    name: "name",
+    age: 24,
+    toString() {
+        return `my name is ${this.name} & i am ${this.age} years old.`
+    }
+}
+
+for (let key in object1) {
+    if (Object.is(key, object1[key])) {
+        // console.log(key + " : " + object1[key]);
+    }
+}
+
+// Object.prototype.hasOwnProperty(), Object.prototype.toString() =>
+// return true / false :)
+// console.log(object1.hasOwnProperty('name'));
+
+// console.log(object1.toString());
+
+// Object.hasOwnProperty.call() =>
+
+// Object: This refers to the built-in Object constructor function in JavaScript.
+// hasOwnProperty: This is a method available on all JavaScript objects, including objects created with object literals or constructed with constructor functions. It checks if an object has a property with a specified name.
+// call: This is a method available on all JavaScript functions. It allows you to invoke a function with a specified this value and additional arguments.
+
+
+console.log(Object.hasOwnProperty.call(object1, "name"));
