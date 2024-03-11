@@ -1,5 +1,6 @@
 // ## Iterating Over Arrays:
 // - for Loop
+// - for..of loop
 // Mathods & Functional Programming with Arrays => 
 // - forEach Method
 // - map Method
@@ -186,3 +187,9 @@ let newNums = numbers
         return acc + cureent;
     },0)
 // console.log(newNums);
+
+// for..of loop =>
+
+for (const value of numbers) {
+    console.log(value);
+}
