@@ -18,9 +18,5 @@
   "bugs": {
     "url": "https://github.com/behan05/JavaScript/issues"
   },
-  "homepage": "https://github.com/behan05/JavaScript#readme",
-  "dependencies": {
-    "immutable": "^5.0.0-beta.5",
-    "simple-color-picker": "^1.0.5"
-  }
+  "homepage": "https://github.com/behan05/JavaScript#readme"
 }
