@@ -2,6 +2,7 @@
 // Immediately Invoked Function Expressions (IIFE)
 // Higher-Order Functions
 // Callback Functions
+// factory function
 // Function Scope and Closure
 
 
@@ -95,6 +96,31 @@ function sayHello(name="behan") {
 }
 
 // callbackfunc(sayHello);
+
+
+// Factory Function =>
+// a function who return object that will be called as factory function.
+
+function createPerson(name, age, greet="greet") {
+    return {
+        name: name,
+        age: age,
+        [greet]() {
+            console.log(`my name ${name} and i am ${age} years old!`);
+        }
+    }
+}
+
+const person1 =  createPerson("behan", 24, "message");
+const person2 =  createPerson("sitesh", 22);
+
+// console.log(person1);
+// console.log(person2);
+person1.message();
+person2.greet()
+person1.name= "john"
+console.log(person1);
+
 
 // Function Scope and Closure =>
 // before understanding closure you have to understand about lexical scope. and before understanding about lexical score need to understand about scope like global, local scope.
