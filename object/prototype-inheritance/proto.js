@@ -4,26 +4,107 @@
 //    - __proto__ vs prototype
 //    - Object.getPrototypeOf(), Object.setPrototypeOf()
 //    - Constructor Function and Prototype Pattern
-//    - Object.create()
+//    - Object.create() 
 
 
 // Prototypal Inheritance =>
 
 // Prototypal Inheritanc is a key concept in javascript, allowing object to inherit properties and method from other objects.
 
-// *************************************************************
+const profile = {
+    name: "behan",
+    age: 24,
+    greet() {
+        return `my name is ${this.name} and i am ${this.age} years old`
+    }
+}
+
+const student = {
+
+    // inherit object
+    // __proto__:profile
+}
+
+// another way to inherit.
+Object.setPrototypeOf(profile, student);
+
+// student.leave = function () {
+//     console.log("leave granted");
+// }
+
+// profile.leave()
+
+// for (let i in student) {
+//     if (typeof student[i] === 'function') {
+//         console.log(student[i]());
+//     }
+//     console.log(student[i]);
+// }
 
 
-// Before diving into prototypes and inheritance in JavaScript, it's essential to have a solid understanding of basic JavaScript concepts. Here's a recommended learning path:
+function person(name) {
+    this.name = name;
+}
 
-// Variables and Data Types: Understand how variables work in JavaScript and the various data types like strings, numbers, booleans, arrays, and objects.
+person.prototype.greet = function () {
+    console.log(`my name is ${this.name}`);
+}
 
-// Functions: Learn about function declarations, expressions, and how functions can be used to perform tasks and organize code.
+const funcObj = new person("behan");
+// funcObj.greet();
 
-// Control Flow: Familiarize yourself with conditional statements (if...else) and loops (for, while) to control the flow of your code.
 
-// Scope and Closures: Understand the concept of scope in JavaScript and how closures work, as they are fundamental to understanding prototypes.
+const myArray = [1, 2, 3, 4, 5];
+const myArray2 = [1, 2, 3, 4, 5, 6, 7];
 
-// Objects and Object-Oriented Programming (OOP) Basics: Gain a basic understanding of objects in JavaScript and how they can contain properties and methods. Get comfortable with creating and manipulating objects.
+Array.prototype.reduces = function () {
+    console.log(this);
+}
 
-// Understanding Prototypes and Inheritance: Once you have a strong foundation in JavaScript basics, you can start exploring prototypes and inheritance. This includes understanding the prototype chain, how inheritance works in JavaScript, and how to create and work with prototypes.
+
+// console.log(myArray);
+// myArray.reduces();
+// myArray2.reduces();
+
+
+// Prototype Chain =>
+
+
+const chain = {
+    name: "behan"
+}
+
+const chain2 = {
+    age: 24,
+    __proto__: chain
+}
+
+const chain3 = {
+    bio: "marta kya nahi karta!",
+    __proto__: chain2
+}
+
+// console.log(chain3.name);
+
+
+// __proto__ vs prototype =>
+
+const chain4 = {
+    name: "behan"
+}
+
+const chain5 = {
+    age: 24,
+    __proto__: chain // inherit
+}
+
+function greeting(name) {
+    this.name = name;
+}
+
+greeting.prototype.sayHello = function() {
+    return `my name is ${this.name}`;
+}
+
+const hey = new greeting("behan")
+// console.log(hey.sayHello());
